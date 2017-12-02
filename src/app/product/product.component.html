@@ -1,0 +1,26 @@
+<ul class = "list-group" *ngIf = "products">
+  <li class = "list-group-item" *ngFor = "let product of products">
+    {{product.name}}
+    <a (click) = "displayProduct(product);">
+      <i class = "fa fa-cog"></i>
+    </a>
+    <table class = "table" *ngIf = "product.details">
+      <thead>
+        <tr>
+          <th>Артикул</th>
+          <th>Наименование</th>
+          <th>Цена</th>
+          <th>Описание</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let detail of product.details">
+          <td>{{detail.article}}</td>
+          <td>{{detail.name}}</td>
+          <td>{{detail.price}} <i class="fa fa-rub"></i></td>
+          <td>{{detail.description}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>

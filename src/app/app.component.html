@@ -1,9 +1,16 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>  
-  <button class="btn btn-primary">Test Button</button>
+<div class = "container">
+  <nav class = "navbar navbar-default">
+    <div class = "navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class = "active">
+          <a routerLink = "/products" routerLinkActive = "true">Продукты</a>
+        </li>
+      </ul>
+    </div>
+
+  </nav>
+  <router-outlet></router-outlet>
 </div>
 
 
